@@ -1,4 +1,4 @@
-.PHONY: build test install
+.PHONY: build test install release
 
 build:
 	./scripts/build.sh
@@ -11,3 +11,6 @@ install: build
 	xattr -cr "/Applications/World Clocks.app"
 	codesign --force --sign - "/Applications/World Clocks.app"
 	@echo "Installed /Applications/World Clocks.app"
+
+release:
+	./scripts/release.sh
