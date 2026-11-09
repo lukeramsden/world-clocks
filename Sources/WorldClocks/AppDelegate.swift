@@ -82,6 +82,7 @@ final class ClockDelegate: NSObject, NSApplicationDelegate {
       window.center()
       settingsWindow = window
     }
+    NSApp.activate(ignoringOtherApps: true)
     settingsWindow?.makeKeyAndOrderFront(nil)
   }
   @objc private func settingsChanged() { update() }
